@@ -19,9 +19,11 @@
                         aria-expanded="false">
                         Benvenuto {{Auth::user()->name}}
                     </a>
+
+
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Profilo</a></li>
-                
+
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -30,6 +32,11 @@
                         @csrf
                         </form>
                     </ul>
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
+                    </li> 
                 </li>
                 @endauth
                 @guest
@@ -46,10 +53,6 @@
                     
                 
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </div>
 </nav>
