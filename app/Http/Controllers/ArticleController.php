@@ -32,7 +32,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-
+            // dd($request->all());
         $request->validate([        
 
             'title' => 'required | unique:articles|min:5',
@@ -48,8 +48,9 @@ class ArticleController extends Controller
             'subtitle' => $request->subtitle,
             'body' => $request->body,
             'image' => $request->file('image')->store('public/images'),
-            'user_id' =>Auth::user()->id,
             'category_id' => $request->category,
+            'user_id' =>Auth::user()->id,
+            
         ]);
 
         return redirect(route('homepage'))->with('message', 'Articolo creato correttamente');

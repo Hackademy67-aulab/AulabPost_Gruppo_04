@@ -21,7 +21,7 @@
                 </div>    
             @endif    
 
-            <form class="card p-5 shadow" action="{{route('article.store')}}" method="post" enctype="multipart/from-data">
+            <form class="card p-5 shadow" action="{{route('article.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
@@ -41,7 +41,7 @@
 
                 <div class="mb-3">
                      <label for="category" class="form-label"> Categoria</label>
-                    <select name="category" class="form-control text-capitalize" id="category">
+                    <select name="category" id="category" class="form-control text-capitalize">
                         @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}} </option>
                         @endforeach

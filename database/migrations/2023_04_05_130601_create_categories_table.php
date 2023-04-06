@@ -20,7 +20,7 @@ return new class extends Migration
 
         $categories = ['politica' , 'economia' , 'food&drink' , 'sport', 'intrattenimento', 'tech'];
 
-        foreach ($categories as $category) {
+        foreach ($categories as $category){
             Category::create([
                 'name' => $category,
             ]);
