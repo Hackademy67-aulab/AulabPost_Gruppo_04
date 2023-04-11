@@ -1,9 +1,9 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class=" text-custom container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <h1 class="display-1">
-                Articoli scritti da: {{$user->name}}
+                ARTICOLI SCRITTI DA: {{$user->name}}
             </h1>
         </div>
     </div>

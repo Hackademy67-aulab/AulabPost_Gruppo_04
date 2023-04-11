@@ -35,3 +35,15 @@
     
    
 }
+
+.card{
+    border: 2px solid rgb(21, 21, 23);
+   
+
+}
+
+.text-custom{
+    background-color: aqua;
+    color: rgb(23, 21, 21);
+    
+}

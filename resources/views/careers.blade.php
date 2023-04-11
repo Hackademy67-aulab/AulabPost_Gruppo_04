@@ -31,7 +31,7 @@
 
             <form method="POST" action="{{route('careers.submit')}}"  class="p-5">
                 @csrf
-
+                
                 <div class="mb-3">
                     <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
                     <select name="role" id="role" class="form-control">
@@ -42,7 +42,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
+                    <label for="email" class="form-label">E-mail</label>
                     <input name="email" type="email" class="form-control" id="email" value="{{old('email') ?? Auth::user()->email}}">
                 </div>
                 <div class="mb-3">
