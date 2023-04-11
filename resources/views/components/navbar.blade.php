@@ -38,9 +38,13 @@
             
 
                 <ul class="dropdown-menu">
+                    
                     @foreach($users as $user)
-                    <li><a class="dropdown-item" href="{{route('article.byUser', compact('user'))}}">{{$user->name}}</a></li>
+                        @if($user->is_writer)
+                            <li><a class="dropdown-item" href="{{route('article.byUser', compact('user'))}}">{{$user->name}}</a></li>
+                        @endif
                     @endforeach
+                    
                 </ul>
                 </li>
 
