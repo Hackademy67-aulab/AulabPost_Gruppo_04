@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -16,7 +20,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        return view ('article.index', compact('articles'));
     }
 
     /**
@@ -62,7 +67,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**
@@ -87,5 +92,31 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+
+    public function byCategory(Category $category){
+
+        $articles = $category->articles->sortByDesc('created_at')->filter(function($article){
+            return $article->is_accepted == true;
+        });
+
+        return view('article.byCategory', compact ('category','articles'));
+
+    }
+    
+    public function byUser(User $user){
+
+        $articles = $user->articles->sortByDesc('created_at');
+        return view('article.byUser', compact ('user','articles'));
+
+    }
+
+    public function byWriter(User $user){
+
+        $articles = $user->articles->sortByDesc('created_at')->filter(function($article){
+            return $article->is_accepted == true;
+        });
+
+        return view('article.byUser', compact ('user','articles'));
     }
 }
