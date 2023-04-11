@@ -12,7 +12,7 @@
     <title>The Aulab Post</title>
   </head>
   <body>
-
+  
   <x-navbar/>
 
     {{$slot}}

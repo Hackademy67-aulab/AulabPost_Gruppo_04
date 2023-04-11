@@ -1,6 +1,10 @@
 {
+  "public/img/keyboard.jpg": {
+    "file": "assets/keyboard-3208fca7.jpg",
+    "src": "public/img/keyboard.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-37892e52.css",
+    "file": "assets/app-355d07f3.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },

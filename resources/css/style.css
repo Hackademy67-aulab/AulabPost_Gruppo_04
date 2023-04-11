@@ -1,0 +1,37 @@
+
+.welcome_custom{
+    color: rgb(33, 123, 168);
+    font-family: 'Lily Script One', cursive;
+    font-size: 100px;
+    margin-top: 500px;
+    margin-left: 1000px;
+    
+    
+}
+
+.nav_custom{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+
+.nav_custom2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    margin-top: 10px;
+    color: darkred;
+
+}
+
+.image-header{
+    background-image: url(/public/img/keyboard.jpg);
+    background-size: cover;
+    background-position: cover;
+    height: 900px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+   
+}

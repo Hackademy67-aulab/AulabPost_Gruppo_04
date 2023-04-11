@@ -1,14 +1,17 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+
+<div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <!-- <a class="nav_custom2 navbar-brand" href="#"> The Aulab Post </a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class=" nav_custom navbar-nav mb-2 mb-lg-0  w-100 justify-content-center">
 
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
@@ -78,11 +81,11 @@
                 </li>
 
                 @if(Auth::user()->is_admin)
-                    <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+                    <li><a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
                 @endif
 
                 @if(Auth::user()->is_revisor)
-                <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del revisore</a></li>
+                <li><a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard del revisore</a></li>
                 @endif
 
                 <li class="nav-item">
@@ -108,3 +111,4 @@
         </div>
     </div>
 </nav>
+</div>

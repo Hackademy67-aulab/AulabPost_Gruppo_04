@@ -1,12 +1,16 @@
 <x-layout>
 
 
+  <div class=" container-fluid d-flex image-header">
+    <div class="row ">
+      <div class="col-12 h-100">
+        <h1 class="welcome_custom  text-center"> The Aulab Post </h1>
+      </div>
 
-    <div class="d-flex">
-        <h1 class="vh-100 vw-100 bg-primary text-center">The Aulab Post</h1>
     </div>
+  </div>
 
-
+  
 
     @if (session('message'))
         <div class="alert alert-success text-center">
@@ -20,7 +24,7 @@
     <div class="row justify-content-center">
         @foreach($articles as $article)
         <div class="col-12 col-md-3">
-
+        
             <div class="card" style="width: 18rem;">
                 <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="...">
                 <div class="card-body">
