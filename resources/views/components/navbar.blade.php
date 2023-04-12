@@ -88,12 +88,18 @@
                 <li><a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard del revisore</a></li>
                 @endif
 
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('careers')}}">Lavora Con Noi</a>
                 </li>
 
                 @endauth
                 
+                <form class="d-flex" method="GET" action="{{route('article.search')}}">
+                    <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Cerca</button>
+                  </form>
+
                 @guest
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -104,6 +110,9 @@
                     <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
                     <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
                   </ul>  
+
+
+
                 @endguest
                     
                 

@@ -59,3 +59,5 @@ Route::middleware('writer')->group(function(){
 
 });
 
+
+Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
