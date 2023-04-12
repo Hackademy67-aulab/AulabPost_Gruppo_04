@@ -1,6 +1,6 @@
 <table class="table table-striped table-hover border">
-<thead class="table-dark">
-    <tr>
+<thead class="tableColorCus">
+    <tr class="dashboardTextCus">
         <th scope="col">#</th>
         <th scope="col">Titolo</th>
         <th scope="col">Sottotitolo</th> 
@@ -10,7 +10,7 @@
 </thead> 
 <tbody>
      @foreach ($articles as $article)
-    <tr>
+    <tr class="dashboardTextCus">
         <th scope="row">{{$article->id}}</th>
         <td>>{{$article->title}}</td>
         <td>{{$article->subtitle}}</td> 
@@ -18,9 +18,9 @@
         <td>
         
             @if(is_null($article->is_accepted))
-            <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi l'articolo</a> 
+            <a href="{{route('article.show', compact('article'))}}" class="btn buttonTableCus">Leggi l'articolo</a> 
             @else
-            <a href="{{route('revisor.undoArticle', compact('article'))}}" cLass="btn btn-info text-white">Riporta in revisione</a> 
+            <a href="{{route('revisor.undoArticle', compact('article'))}}" cLass="btn buttonTableCus">Riporta in revisione</a> 
             @endif
 
         </td> 

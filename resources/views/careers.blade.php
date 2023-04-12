@@ -1,6 +1,6 @@
 <x-layout>
 
-<div class="container-fluid p-5 bg-info text-center">
+<div class="container-fluid p-5 text-center titleCareerCus">
     <div class="row justify-content-center">
         <h1 class="display-1">
             Lavora con noi
@@ -8,15 +8,15 @@
     </div>
 </div>
 
-<div class="container my-5">
+<div class="container my-5 careerFormCus">
     <div class="row justify-content-center align-items-center border rounded p-2 shadow">
         <div class="col-12 col-md-6">
-            <h2>Lavora come amministratore</h2>
-            <p>Cosa farai: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, nam!</p>
-            <h2>Lavora come revisore</h2>
-            <p>Cosa farai: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, nam!</p>
+            <h2 >Lavora come amministratore</h2>
+            <p class="careerDetailCus">Cosa farai: l'amministratore della piattaforma, si occuperà di gestire le richieste di lavoro e della gestione delle categorie. </p>
+            <h2 >Lavora come revisore</h2>
+            <p class="careerDetailCus">Cosa farai: Come revisore della piattaforma, ti occupererai di decidere se un articolo può essere pubblicato o meno, in base agli standard del team.</p>
             <h2>Lavora come redattore</h2>
-            <p>Cosa farai: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, nam!</p>
+            <p class="careerDetailCus">Cosa farai: i redattori, si occuperanno di scrivere gli articoli, da pubblicare nel nostro sito.</p>
         </div>
         <div class="col-12 col-md-6">
             @if ($errors->any())
@@ -34,7 +34,7 @@
                 
                 <div class="mb-3">
                     <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
-                    <select name="role" id="role" class="form-control">
+                    <select name="role" id="role" class="form-control careerInputAreaCus">
                         <option value="">Scegli qui</option>
                         <option value="admin">Amministratore</option>
                         <option value="revisor">Revisor</option>
@@ -42,15 +42,15 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">E-mail</label>
-                    <input name="email" type="email" class="form-control" id="email" value="{{old('email') ?? Auth::user()->email}}">
+                    <label for="email" class="form-label ">E-mail</label>
+                    <input name="email" type="email" class="form-control careerInputAreaCus" id="email" value="{{old('email') ?? Auth::user()->email}}">
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Parlaci di te</label>
-                    <textarea name="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control careerInputAreaCus">{{old('message')}}</textarea>
                 </div>
                 <div class="mt-2">
-                    <button class="btn btn-info text-white">Invia la candidatura</button>
+                    <button class="btn buttonTableCus">Invia la candidatura</button>
                 </div>
             </form>
         </div>

@@ -1,7 +1,7 @@
 
 
 <div>
-<nav class="navbar navbar-expand-lg bg-body-tertiary ">
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow navbarCus ">
     <div class="container-fluid">
         <!-- <a class="nav_custom2 navbar-brand" href="#"> The Aulab Post </a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -11,10 +11,10 @@
         
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
-            <ul class=" nav_custom navbar-nav mb-2 mb-lg-0  w-100 justify-content-center">
+            <ul class=" navbarTextCus navbar-nav mb-2 mb-lg-0  w-100 justify-content-center">
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">The Aulab Post</a>
                 </li>
 
                 <li class="nav-item">
@@ -26,7 +26,7 @@
                     data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
             
 
-                <ul class="dropdown-menu">
+                <ul class="dropdownCus dropdown-menu">
                     @foreach($categories as $category)
                     <li><a class="dropdown-item" href="{{route('article.byCategory', compact('category'))}}">{{$category->name}}</a></li>
                     @endforeach
@@ -40,7 +40,7 @@
                     data-bs-toggle="dropdown" aria-expanded="false">Scrittori</a>
             
 
-                <ul class="dropdown-menu">
+                <ul class="dropdownCus dropdown-menu">
                     
                     @foreach($users as $user)
                         @if($user->is_writer)
@@ -63,7 +63,7 @@
                     </a>
 
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdownCus dropdown-menu">
                         <li><a class="dropdown-item" href="#">Profilo</a></li>
 
                         <li>

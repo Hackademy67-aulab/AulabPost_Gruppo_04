@@ -1,7 +1,38 @@
+*{
+
+    font-family: var(--secondaryFont);
+    
+
+}
+
+
+:root {
+
+    /* Color Setting */
+
+    --primaryColor: rgb(231, 215, 200);
+    --secondaryColor: rgb(207, 197, 195);
+    --accentColor:rgb(206, 216, 228);
+    --whiteCus:rgb(242, 242, 240);
+    --blackCus:rgb(66, 66, 66);
+
+    /* Font Setting */
+
+    --primaryFont: 'Nanum Gothic', sans-serif;
+    --secondaryFont: 'Nanum Myeongjo', serif;
+    
+    
+
+}
+
+
+
+
+
 
 .welcome_custom{
-    color: rgb(33, 123, 168);
-    font-family: 'Lily Script One', cursive;
+    color: var(--blackCus);
+    font-family: var(--secondaryFont);
     font-size: 100px;
     margin-top: 500px;
     margin-left: 1000px;
@@ -9,11 +40,22 @@
     
 }
 
-.nav_custom{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* NAVBAR */
+
+
+.navbarCus{
+
+    background-color: var(--secondaryColor);
+
+}
+
+
+.navbarTextCus{
+    font-family: var(--secondaryFont);
     font-size: 25px;
     margin-top: 10px;
 }
+
 
 
 .nav_custom2{
@@ -24,26 +66,194 @@
 
 }
 
+.dropdownCus{
+
+    background-color: var(--primaryColor);
+
+}
+
+
+
+
+/* HEADER  */
+
 .image-header{
     background-image: url(/public/img/keyboard.jpg);
     background-size: cover;
     background-position: cover;
     height: 900px;
-    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     
    
 }
 
-.card{
+/* .card{
     border: 2px solid rgb(21, 21, 23);
    
 
+} */
+
+
+
+.bodyBackgroundColor{
+
+    background-color: var(--primaryColor);
+
 }
 
+
+/* DASHBOARD */
+
+.dashboardTitleCus{
+
+    color: var(--whiteCus);
+
+
+}
+
+.tableColorCus{
+
+    background-color: var(--blackCus);
+    color: var(--whiteCus);
+
+}
+
+.buttonTableCus{
+
+    background-color: var(--secondaryColor);
+    color: var(--blackCus);
+
+}
+
+.buttonAcceptTableCus{
+
+    background-color: var(--blackCus);
+    color: var(--whiteCus);
+
+}
+
+.dashboardTextCus{
+
+    font-size: 20px ;
+
+}
+
+.showArticleCus{
+
+    background-color: var(--accentColor);
+
+}
+
+/* Article Form */
+
+.articleFormCus{
+
+    background-color: var(--accentColor);
+
+}
+
+.articleInputAreaCus{
+
+    background-color: var(--whiteCus);
+
+}
+
+/* INDEX */
+
+.indexTitleCus{
+
+    color: var(--whiteCus);
+
+}
+
+.articleCardCus{
+
+    background-color: var(--whiteCus);
+    border: 0px;
+
+
+}
+
+.articleDetailCus{
+
+    background-color: var(--whiteCus);
+   
+
+
+}
+
+/* CATEGORIE */
+
 .text-custom{
-    background-color: aqua;
-    color: rgb(23, 21, 21);
+    
+    color: var(--whiteCus);
     
 }
+
+/* Careers (Lavora Con Noi) */
+
+.titleCareerCus{
+    
+    color: var(--whiteCus);
+    
+}
+
+.careerDetailCus{
+
+    border-bottom: 1px solid var(--blackCus);
+
+}
+
+.careerInputAreaCus{
+
+    background-color: var(--whiteCus);
+
+}
+
+.careerFormCus{
+
+    background-color: var(--accentColor);
+
+}
+
+/* Login Form*/
+
+.loginTitleCus{
+    
+    color: var(--whiteCus);
+    
+}
+
+.loginFormCus{
+
+    background-color: var(--accentColor);
+
+}
+
+.loginInputAreaCus{
+
+    background-color: var(--whiteCus);
+
+}
+
+/* Register Form */
+
+.registerTitleCus{
+    
+    color: var(--whiteCus);
+    
+}
+
+.registerFormCus{
+
+    background-color: var(--accentColor);
+
+}
+
+.registerInputAreaCus{
+
+    background-color: var(--whiteCus);
+
+}
+
