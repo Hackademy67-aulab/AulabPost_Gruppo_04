@@ -21,6 +21,8 @@ class AdminController extends Controller
     }
 
     public function setAdmin(User $user){
+
+    
         $user->update([
             'is_admin' => true,
         ]);

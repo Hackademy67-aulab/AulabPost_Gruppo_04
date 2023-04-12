@@ -35,7 +35,7 @@
                 <div class="mb-3">
                     <label for="role" class="form-label">Per quale ruolo ti stai candidando?</label>
                     <select name="role" id="role" class="form-control careerInputAreaCus">
-                        <option value="">Scegli qui</option>
+                        <option>Scegli qui</option>
                         <option value="admin">Amministratore</option>
                         <option value="revisor">Revisor</option>
                         <option value="writer">Redattore</option>

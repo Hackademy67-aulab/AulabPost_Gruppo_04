@@ -53,5 +53,22 @@ class User extends Authenticatable
         return $this->hasMany(Article::class);
     }
 
+    public function role(){
+        $role=[];
+
+        if($this->is_admin){
+            array_push($role,"admin");
+        }
+
+        if($this->is_revisor){
+            array_push($role,"revisor");
+        }
+
+        if($this->is_writer){
+            array_push($role,"writer");
+        }
+        return $role;
+    }
+    
     
 }

@@ -18,12 +18,36 @@
                         <p class="fs-5">Redatto da {{$article->user->name}} il {{$article->created_at->format('d/m/Y')}}</p>
                     </div>
                 </div>
-                <p class="fs-4">{{$article->body}}</p>
+                <p class="fs-4 text-center">{{$article->body}}</p>
 
-                @if(Auth::user() && Auth::user()->is_revisor)
+
+                {{-- @if($article->is_accepted == false)
+                    @if(Auth::user() && Auth::user()->is_revisor)
                     <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn buttonAcceptTableCus my-5">Accetta articolo</a>
                     <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn buttonTableCus my-5">Rifiuta articolo</a>
-                @endif
+                    @endif
+                @endif --}}
+
+                    @if($article->user->id != Auth::user()->id)
+
+                        @if($article->is_accepted == false && Auth::user() && Auth::user()->is_revisor)
+                            <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn buttonAcceptTableCus my-5">Accetta articolo</a>
+                            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn buttonTableCus my-5">Rifiuta articolo</a>
+                        @endif
+                        
+                    @else 
+
+                        <div class="warningTextCus text-center rounded">Pubblicazione non autorizzata dallo stesso utente.</div>
+                     
+                    @endif
+                    
+                        
+                        
+                    
+                    
+                 
+
+
 
                 <div class="text-center">
                     <a href="{{route('article.index')}}" class="btn buttonTableCus my-5">Torna indietro</a>
