@@ -13,7 +13,7 @@
           @foreach($articles as $article)
             <div class="col-12 col-md-3">
     
-                <div class="card articleCardCus p-4 fs-4 text-center" style="width: 18rem;">
+                <div class="card articleCardCus p-4 fs-4 text-center mb-3" style="width: 18rem;">
                     <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">{{$article->title}}</h5>
