@@ -21,9 +21,15 @@
                     </div>
 
                     <ul class="list-group list-group-flush">
+                      
+                      @if($article->category)
                       <a href="{{route('article.byCategory', ['category' => $article->category->id])}}">
                         <li class="list-group-item articleDetailCus">{{$article->category->name}}</li>
                       </a>
+                      @else
+                        <p class="small text-muted fst-italic text-capitalize"> Non categorizzato</p>
+                      @endif
+
                         <li class="list-group-item articleDetailCus">{{$article->created_at->format('d/m/Y')}}</li>
                         <li class="list-group-item articleDetailCus">{{$article->user->name}}</li>
                     </ul>

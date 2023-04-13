@@ -18,7 +18,15 @@
                         <div class="card-body">
                             <h5 class="card-title fs-1">{{ $article->title }}</h5>
                             <p class="card-text">{{ $article->subtitle }}</p>
-                            <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}" class="small text-muted fst-italic text-capitalize">{{ $article->category->name }}</a>
+                            
+                            @if($article->category)
+                            <a href="{{route('article.byCategory', ['category' => $article->category->id])}}">
+                              <li class="list-group-item articleDetailCus">{{$article->category->name}}</li>
+                            </a>
+                            @else
+                              <p class="small text-muted fst-italic text-capitalize"> Non categorizzato</p>
+                            @endif
+      
                         </div>
                         <div class="card-footer text-muted d-flex justify-content-between align-items-center">
                             <a href="{{route('article.byUser', ['user' => $article->user->id])}}">Redatto il

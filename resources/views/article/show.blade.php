@@ -28,27 +28,37 @@
                     @endif
                 @endif --}}
 
-                    @if($article->user->id != Auth::user()->id)
+                    {{-- @if($article->user->id != Auth::user()->id)
 
-                        @if($article->is_accepted == false && Auth::user() && Auth::user()->is_revisor)
+                        @if()
                             <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn buttonAcceptTableCus my-5">Accetta articolo</a>
                             <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn buttonTableCus my-5">Rifiuta articolo</a>
-                        @endif
                         
-                    @else 
+                        @else
 
-                        <div class="warningTextCus text-center rounded">Pubblicazione non autorizzata dallo stesso utente.</div>
+                            <div class="warningTextCus text-center rounded">Pubblicazione non autorizzata dallo stesso utente.</div>
+                        
+                        @endif
                      
                     @endif
-                    
+                     --}}
+
+
+                     @if($article->is_accepted == false && Auth::user() && Auth::user()->is_revisor)
+
+                        @if($article->user->id != Auth::user()->id)
+                            <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn buttonAcceptTableCus my-5">Accetta articolo</a>
+                            <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn buttonTableCus my-5">Rifiuta articolo</a>
                         
+                        @else
+
+                            <div class="warningTextCus text-center rounded">Pubblicazione non autorizzata dallo stesso utente.</div>
                         
-                    
-                    
+                        @endif
+                  
+                    @endif
                  
-
-
-
+                        
                 <div class="text-center">
                     <a href="{{route('article.index')}}" class="btn buttonTableCus my-5">Torna indietro</a>
                 </div>
