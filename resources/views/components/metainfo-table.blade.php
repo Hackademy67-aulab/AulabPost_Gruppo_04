@@ -29,6 +29,7 @@
                     @csrf 
                     @method('delete')
                     <button type="submit" class="btn btn-danger text-white">Elimina</button>
+            </form>
             </td>
             @else
             <td>
