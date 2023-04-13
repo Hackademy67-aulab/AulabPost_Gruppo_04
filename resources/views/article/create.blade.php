@@ -20,7 +20,7 @@
                 </ul>
                 </div>    
             @endif    
-
+            
             <form class="card p-5 shadow articleFormCus" action="{{route('article.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
 
@@ -53,6 +53,11 @@
                     <textarea name="body" cols="30" rows="7" class="form-control articleInputAreaCus" id="body">{{old('body')}}</textarea>
                 </div>
 
+                <div class="mb-3">
+                    <label for="tags" class="form-label" > Tags: </label>
+                    <input name="tags" id="tags" class="form-control" value="{{old('tags')}}">
+                    <span class="small fst-italic"> Dividi ogni tag con una virgola </span>
+                </div>
 
                 <div class="mt-2">
                     <button class="btn buttonAcceptTableCus"> Inserisci un articolo</button>

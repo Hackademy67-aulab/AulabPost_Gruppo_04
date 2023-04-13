@@ -31,6 +31,8 @@ class Article extends Model
             'category' => $this->category,
         ];
 
+        
+
     }
 
     public function user(): BelongsTo
@@ -41,4 +43,10 @@ class Article extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
+    public function tags(){
+        return $this->belongsToMany(Tag::class);
+    }
 }
+
+

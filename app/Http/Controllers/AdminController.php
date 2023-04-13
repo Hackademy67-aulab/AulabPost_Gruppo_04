@@ -9,7 +9,7 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
-
+    
     public function dashboard(){
 
         $adminRequests = User::where('is_admin', NULL)->get();
@@ -44,5 +44,19 @@ class AdminController extends Controller
         ]);
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso redattore l\'utente scelto');
+    }
+
+    public function editTag(Request $request, Tag $tag){
+        $request->validate([
+            'name' => 'required|unique:tags',
+
+        ]);
+
+        $tag->update([
+            'name' => strtolower($request->name),
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente aggiornato il tag');
+        
     }
 }

@@ -40,6 +40,13 @@
                     <li class="list-group-item articleDetailCus">{{$article->created_at->format('d/m/Y')}}</li>
                     <li class="list-group-item articleDetailCus">{{$article->user->name}}</li>
                 </ul>
+                
+                <p class="small fst-italic text-capitalize">
+                  @foreach($article->tags as $tag)
+                  #{{$tag->name}}
+                  @endforeach
+                </p>
+
                 <div class="card-body">
                   <a href="{{route('article.show', compact('article'))}}" class="btn buttonTableCus">Leggi</a>
                 
