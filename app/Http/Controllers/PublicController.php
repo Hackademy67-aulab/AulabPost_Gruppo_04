@@ -68,7 +68,7 @@ class PublicController extends Controller
             return redirect(route('homepage'))->with('message', 'Grazie per averci contattato');
         } else {
 
-            return redirect(route('homepage'))->with('message', 'Noooo');
+            return redirect(route('careers'))->with('message', 'Impossibile procedere: Selezionare un\'altro ruolo');
         }
     }
 }

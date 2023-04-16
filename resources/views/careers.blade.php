@@ -1,5 +1,13 @@
 <x-layout>
 
+
+
+    @if (session('message'))
+    <div class="alert alert-danger text-center p-4 m-0">
+        {{ session('message') }}
+    </div>
+  @endif
+
 <div class="container-fluid p-5 text-center titleCareerCus">
     <div class="row justify-content-center">
         <h1 class="display-1">

@@ -21,7 +21,7 @@
                     @csrf 
                     @method('put')
                     <input type="text" name="name" placeholder="Nuovo nome" class="form-control w-50 d-inline">
-                    <button type="submit" class="btn btn-info text-white">Aggiorna</button>
+                    <button type="submit" class="btn buttonTableCus">Aggiorna</button>
                 </form>
             </td>
             <td>
@@ -37,7 +37,7 @@
                     @csrf 
                     @method('put')
                     <input type="text" name="name" placeholder="Nuovo nome categoria" class="form-control w-50 d-inline">
-                    <button type="submit" class="btn btn-info text-white">Aggiorna</button>
+                    <button type="submit" class="btn buttonTableCus">Aggiorna</button>
                 </form>
             </td>
 

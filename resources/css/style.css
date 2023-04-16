@@ -25,6 +25,29 @@
 
 }
 
+/* Link setting */
+
+a:link{
+
+    
+    text-decoration: none;
+
+}
+/* 
+
+a:hover{
+
+    color:var(--accentColor);
+
+}
+
+.linkCus{
+
+    text-decoration: none;
+    color: var(--blackCus);
+
+} */
+
 
 
 
@@ -69,6 +92,13 @@
 .dropdownCus{
 
     background-color: var(--primaryColor);
+
+}
+
+.buttonSearchCus{
+
+    background-color: var(--accentColor);
+    
 
 }
 
@@ -192,8 +222,14 @@
 .articleDetailCus{
 
     background-color: var(--whiteCus);
-   
 
+   
+}
+
+.buttonShowCus{
+
+    background-color: var(--secondaryColor);
+    color: var(--blackCus);
 
 }
 
@@ -270,4 +306,6 @@
     background-color: var(--whiteCus);
 
 }
+
+
 
