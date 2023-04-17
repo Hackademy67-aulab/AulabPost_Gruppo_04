@@ -99,6 +99,10 @@
                 <li><a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard del revisore</a></li>
                 @endif
 
+                @if(Auth::user()->is_writer)
+                <li><a class="nav-link" href="{{route('writer.dashboard')}}">Dashboard del redattore</a></li>
+                @endif
+
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('careers')}}">Lavora Con Noi</a>
