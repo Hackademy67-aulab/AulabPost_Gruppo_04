@@ -14,14 +14,16 @@
                 @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>
-                            @foreach ($errors->all()as $error)
+                            @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
+                            @endforeach
                         </ul>
                     </div>
                 @endif
 
-                <form action="" class="card p-5 shadow" method="" enctype="">
+                <form class="card p-5 shadow" action="{{route('article.update', ['article' => $article->id])}}"  method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
 
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo:</label>
@@ -39,7 +41,7 @@
                         <label for="category" class="form-label">Categoria:</label>
                         <select name="category" id="category" class="form-control text-capitalize">
                             @foreach($categories as $category)
-                            <option value="{{$category->id}}" @if($article->category && $category->id == $article->category->id) selected @endif>{{}}</option>
+                            <option value="{{$category->id}}" @if($article->category && $category->id == $article->category->id) selected @endif>{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -49,7 +51,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="tags" class="form-label">Tags:</label>
-                        <input name="tags" id="subtitle" class="form-control" value="{{$article->tags->implode('name', ', ')}}">
+                        <input name="tags" id="tags" class="form-control" value="{{$article->tags->implode('name', ', ')}}">
                         <span class="small fst-italic">Dividi ogni tag con una virgola</span>
                     </div>
 
