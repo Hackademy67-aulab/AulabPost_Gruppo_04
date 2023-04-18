@@ -1,3 +1,5 @@
+
+
 *{
 
     font-family: var(--secondaryFont);
@@ -13,6 +15,7 @@
     --primaryColor: rgb(231, 215, 200);
     --secondaryColor: rgb(207, 197, 195);
     --accentColor:rgb(206, 216, 228);
+    --accentColor2:rgb(166, 102, 104);
     --whiteCus:rgb(242, 242, 240);
     --blackCus:rgb(66, 66, 66);
 
@@ -31,22 +34,9 @@ a:link{
 
     
     text-decoration: none;
+    
 
 }
-/* 
-
-a:hover{
-
-    color:var(--accentColor);
-
-}
-
-.linkCus{
-
-    text-decoration: none;
-    color: var(--blackCus);
-
-} */
 
 
 
@@ -102,6 +92,11 @@ a:hover{
 
 }
 
+.iconCus{
+
+    font-size: 30px;
+
+}
 
 
 
@@ -304,6 +299,38 @@ a:hover{
 .registerInputAreaCus{
 
     background-color: var(--whiteCus);
+
+}
+
+/* footer */
+
+
+.footerCus{
+
+    background-color: var(--accentColor2);
+    color: var(--whiteCus);
+    font-size: 18px;
+
+
+}
+
+.linkFooterCus{
+
+    color: var(--whiteCus);
+    
+
+}
+
+.linkFooterCus:hover{
+
+    color: var(--whiteCus);
+
+}
+
+.footerTitleCus{
+
+    font-size: 50px;
+    margin-bottom: 10px;
 
 }
 

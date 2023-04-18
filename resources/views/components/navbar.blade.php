@@ -7,12 +7,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse row" id="navbarSupportedContent">
 
                 <ul class=" navbarTextCus navbar-nav mb-2 mb-lg-0  w-100 justify-content-center">
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">The Aulab Post</a>
+                    <li class="nav-item d-flex iconCus col-3">
+                        <a class="nav-link active " aria-current="page" href="{{ route('homepage') }}">The Aulab Post</a>
                     </li>
 
                     <li class="nav-item">
@@ -57,51 +57,7 @@
                         </ul>
                     </li>
 
-{{-- 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                          data-mdb-toggle="dropdown" aria-expanded="false">
-                          Dropdown link
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <li>
-                            <a class="dropdown-item" href="#">Action</a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#">Another action</a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#">
-                              Submenu &raquo;
-                            </a>
-                            <ul class="dropdown-menu dropdown-submenu">
-                              <li>
-                                <a class="dropdown-item" href="#">Submenu item 1</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Submenu item 2</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                                <ul class="dropdown-menu dropdown-submenu">
-                                  <li>
-                                    <a class="dropdown-item" href="#">Multi level 1</a>
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href="#">Multi level 2</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Submenu item 4</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">Submenu item 5</a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li> --}}
+
 
 
                     @Auth
@@ -115,17 +71,7 @@
                             </li>
                         @endif
 
-                        @if (Auth::user()->is_admin)
-                            <li><a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
-                        @endif
-
-                        @if (Auth::user()->is_revisor)
-                            <li><a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a></li>
-                        @endif
-
-                        @if (Auth::user()->is_writer)
-                            <li><a class="nav-link" href="{{ route('writer.dashboard') }}">Dashboard del redattore</a></li>
-                        @endif
+ 
 
 
                         <li class="nav-item">
@@ -140,7 +86,17 @@
 
 
                             <ul class="dropdownCus dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                @if (Auth::user()->is_admin)
+                                <li><a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+                            @endif
+    
+                            @if (Auth::user()->is_revisor)
+                                <li><a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a></li>
+                            @endif
+    
+                            @if (Auth::user()->is_writer)
+                                <li><a class="nav-link" href="{{ route('writer.dashboard') }}">Dashboard del redattore</a></li>
+                            @endif
 
                                 <li>
                                     <hr class="dropdown-divider">
@@ -178,7 +134,7 @@
 
                     @endguest
 
-                    <form class="d-flex" method="GET" action="{{ route('article.search') }}">
+                    <form class="d-flex " method="GET" action="{{ route('article.search') }}">
                         <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando?"
                             aria-label="Search">
                         <button class="btn buttonSearchCus" type="submit">Cerca</button>

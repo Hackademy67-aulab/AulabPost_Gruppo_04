@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="container my-5 card" style="width: 18rem;">
+    <div class="container my-5 ">
         <div class="row justify-content-around ">
             <div class="col-12 col-md-8 shadow p-4 rounded showArticleCus ">
                 <img src="{{Storage::url($article->image)}}" alt="" class="img-fluid my-3">
