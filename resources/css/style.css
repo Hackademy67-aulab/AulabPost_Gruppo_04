@@ -50,8 +50,18 @@ a:link{
     margin-top: 500px;
     margin-left: 1000px;
     
+
+    }
+
+
+/* .welcome_custom{
+
+    color: var(--blackCus);
+    font-family: var(--secondaryFont);
+    font-size: 100px;
     
-}
+
+} */
 
 /* NAVBAR */
 
@@ -59,6 +69,7 @@ a:link{
 .navbarCus{
 
     background-color: var(--secondaryColor);
+  
 
 }
 
@@ -98,6 +109,16 @@ a:link{
 
 }
 
+.stickyNav{
+
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+
+
+}
+
 
 
 /* HEADER  */
@@ -126,6 +147,23 @@ a:link{
     background-color: var(--primaryColor);
 
 }
+
+/* FILTER */
+
+.buttonFilterCus{ 
+
+ 
+    background-color: var(--secondaryColor);
+    margin-top: 20px;
+    padding: 10px;
+    
+
+ 
+
+
+}
+
+
 
 
 /* DASHBOARD */
@@ -336,3 +374,33 @@ a:link{
 
 
 
+/* MEDIA QUERY */
+
+
+@media screen and (max-width: 900px){
+
+    .welcome_custom{
+
+        justify-content: center;
+        align-items: center;
+        margin-top: 65vh;
+        margin-left: 0px;
+        
+
+    }
+
+    /* .buttonFilterCus{
+
+       s
+
+    } */
+
+    .mainButtonFilterCus{
+
+        margin-top: 5px;
+        
+    }
+
+
+
+}

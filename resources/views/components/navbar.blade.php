@@ -1,6 +1,6 @@
-<div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow navbarCus ">
-        <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow navbarCus stickyNav">
+        <div class="container-fluid ">
             <!-- <a class="nav_custom2 navbar-brand" href="#"> The Aulab Post </a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,4 +145,3 @@
             </div>
         </div>
     </nav>
-</div>
